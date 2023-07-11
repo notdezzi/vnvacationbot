@@ -123,13 +123,13 @@ client.on(Events.InteractionCreate, async interaction => {
         const vaccceptEmbed2 = new EmbedBuilder()
             .setColor(0x0099FF)
             .setTitle('Vacation Angenommen')
-            .setDescription(`Vacation for <@${userid}>`)
+            .setDescription(`Vacation for <@${userid}> was accept by <@${interaction.user.id}>`)
             .setThumbnail(thumbnail)
             .addFields({
-                name: 'Period from',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period from <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: datefrom
             }, {
-                name: 'Period until',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period until <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: dateuntil
             })
             .setImage(rainbow)
@@ -178,16 +178,16 @@ client.on(Events.InteractionCreate, async interaction => {
             .setDescription('Irgend so ein Faullenzer will wieder urlaub cheffe')
             .setThumbnail(thumbnail)
             .addFields({
-                name: 'Period from',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period from <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: datefrom
             }, {
-                name: 'Period until',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period until <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: dateuntil
             }, {
-                name: 'Reason',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Reason For <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: reason
             }, {
-                name: 'User',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> User <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: "<@" + userid + ">"
             }, )
             .setImage(rainbow)
@@ -200,11 +200,11 @@ client.on(Events.InteractionCreate, async interaction => {
         const vacrow = new ActionRowBuilder()
             .addComponents(confirm, cancel);
 
-        await client.channels.cache.get('AdminCHannelID').send({
+        await client.channels.cache.get('1095241282802167829').send({
             embeds: [adminEmbed],
             components: [vacrow]
         });
-        const successEmbed = new EmbedBuilder().setTitle('Successfully sent vacation request');
+        const successEmbed = new EmbedBuilder().setTitle('<a:Accepted:1128450117343658085> Successfully sent vacation request');
         await interaction.reply({ embeds: [successEmbed], ephemeral: true });
     } else if (interaction.customId == "vacdeclinemodal") {
 
@@ -219,14 +219,14 @@ client.on(Events.InteractionCreate, async interaction => {
             .setDescription(`Vacation for <@${userid}> was declined by: <@${interaction.user.id}>`)
             .setThumbnail(thumbnail)
             .addFields({
-                name: 'Reason',
-                value: reason
-            }, {
-                name: 'Period from',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period from <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: datefrom
             }, {
-                name: 'Period until',
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period until <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
                 value: dateuntil
+            },{
+                name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Reason For <:yamimid:1128449249399554168><:yamimid:1128449249399554168>',
+                value: reason
             })
             .setImage(rainbow)
             .setTimestamp()

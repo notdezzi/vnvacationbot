@@ -26,9 +26,9 @@ module.exports = {
       .setDescription('Please read the Instructions: \n If you dont you dont get to go on vacation 👿')
       .setThumbnail('https://images.emojiterra.com/twitter/v14.0/512px/1f334.png')
       .addFields(
-        { name: 'Period from', value: 'From when will you be abscent / on vacation' },
-        { name: 'Period to', value: 'When will you be back' },
-        { name: 'Reason', value: 'Why are you abscent' },
+        { name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period from <:yamimid:1128449249399554168><:yamimid:1128449249399554168>', value: '<a:yamiarrow:1128452601646686228> From when will you be abscent / on vacation' },
+        { name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Period until <:yamimid:1128449249399554168><:yamimid:1128449249399554168>', value: '<a:yamiarrow:1128452601646686228> When will you be back' },
+        { name: '<:yamimid:1128449249399554168><:yamimid:1128449249399554168> Reason <:yamimid:1128449249399554168><:yamimid:1128449249399554168>', value: '<a:yamiarrow:1128452601646686228> Why are you abscent' },
       )
       .setImage('https://media.discordapp.net/attachments/770742078309269544/857602260459585556/Rainbow_x3.gif')
       .setTimestamp()
