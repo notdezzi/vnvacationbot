@@ -43,10 +43,6 @@ const {
 } = require("./Handlers/eventHandler");
 loadEvents(client);
 
-const {
-    loadConfig
-} = require("./Functions/configLoader");
-loadConfig(client);
 
 client.on(Events.InteractionCreate, async interaction => {
     if (interaction.customId == "vacation") {
@@ -204,7 +200,7 @@ client.on(Events.InteractionCreate, async interaction => {
         const vacrow = new ActionRowBuilder()
             .addComponents(confirm, cancel);
 
-        await client.channels.cache.get('Adminchannelid').send({
+        await client.channels.cache.get('AdminCHannelID').send({
             embeds: [adminEmbed],
             components: [vacrow]
         });
